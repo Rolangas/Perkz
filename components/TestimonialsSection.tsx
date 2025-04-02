@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeftIcon, ChevronRightIcon, StarIcon } from "lucide-react";
 import { fadeUpVariants, defaultViewport } from "@/components/ui/animation-utils";
+import Image from "next/image";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -13,6 +14,7 @@ const TestimonialsSection = () => {
       role: "Head of Sales",
       company: "Loop Studios",
       image: "/images/testimonial-1.jpg",
+      companyLogo: "/images/idevibelogo.png",
       content: "Perkz has transformed how our team uses meal benefits. Instead of wasting them in unnecessary food, we can save and spend strategically. It's made our benefits truly valuable!",
       rating: 5,
     },
@@ -22,6 +24,7 @@ const TestimonialsSection = () => {
       role: "Head of Marketing",
       company: "Konin Life",
       image: "/images/testimonial-2.jpg",
+      companyLogo: "/images/idevibelogo.png",
       content: "As someone who often works from home, I love that I can save my meal allowances for days I'm in the office. The flexibility Perkz offers means I never lose the benefits I'm entitled to.",
       rating: 5,
     },
@@ -31,6 +34,7 @@ const TestimonialsSection = () => {
       role: "HR Manager",
       company: "Must Consulting",
       image: "/images/testimonial-3.jpg",
+      companyLogo: "/images/idevibelogo.png",
       content: "From an HR perspective, Perkz has been a game-changer for our benefits program. Employees are happier, and the administrative overhead is minimal. The ROI has been outstanding.",
       rating: 5,
     },
@@ -162,7 +166,7 @@ const TestimonialsSection = () => {
                           />
                         ))}
                       </div>
-                      <p className="text-white text-lg italic mb-6">"{testimonials[activeSlide].content}"</p>
+                      <p className="text-white text-lg italic mb-6">&ldquo;{testimonials[activeSlide].content}&rdquo;</p>
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg mr-4">
                           {testimonials[activeSlide].name.charAt(0)}
@@ -187,7 +191,7 @@ const TestimonialsSection = () => {
               aria-label="Previous testimonial"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
               <ChevronLeftIcon className="w-6 h-6" />
             </motion.button>
@@ -199,7 +203,7 @@ const TestimonialsSection = () => {
               aria-label="Next testimonial"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
               <ChevronRightIcon className="w-6 h-6" />
             </motion.button>
@@ -239,10 +243,12 @@ const TestimonialsSection = () => {
                 whileHover={{ scale: 1.08, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
                 whileTap={{ scale: 0.97 }}
               >
-                <img 
+                <Image 
                   src={client.logo}
                   alt={`${client.name} logo`}
                   className="max-w-full max-h-full object-contain"
+                  width={144}
+                  height={96}
                 />
               </motion.div>
             ))}
