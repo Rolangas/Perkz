@@ -50,14 +50,14 @@ const FeaturesSection = () => {
 
   return (
     <section id="features" className="section relative py-20 md:py-32 overflow-hidden">
-      {/* Background decorative elements with parallax */}
+      {/* Background decorative elements with parallax - Fixed for iOS */}
       <motion.div 
         style={{ y: y1, rotate }}
-        className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-[100px] -z-10"
+        className="absolute -top-40 -right-40 w-80 h-80 bg-[rgba(59,130,246,0.05)] rounded-full blur-[80px] -z-10"
       ></motion.div>
       <motion.div 
         style={{ y: y2, rotate: useTransform(rotate, value => -value) }}
-        className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-[100px] -z-10"
+        className="absolute -bottom-40 -left-40 w-80 h-80 bg-[rgba(168,85,247,0.05)] rounded-full blur-[80px] -z-10"
       ></motion.div>
       
       <div className="container mx-auto px-4 md:px-6">
@@ -105,7 +105,7 @@ const FeaturesSection = () => {
               }}
             >
               <motion.div 
-                className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl blur-sm opacity-70 group-hover:opacity-100 transition-opacity duration-300 -z-10"
+                className="absolute inset-0 bg-[rgba(37,99,235,0.07)] rounded-2xl blur-sm opacity-70 group-hover:opacity-100 transition-opacity duration-300 -z-10"
                 whileHover={{ 
                   scale: 1.05, 
                   opacity: 1 
@@ -180,9 +180,10 @@ const FeaturesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: defaultEasing }}
           viewport={defaultViewport}
-          className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10 shadow-xl"
+          className="bg-[rgba(30,58,138,0.3)] backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10 shadow-xl"
           whileHover={{ 
             boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.35)",
+            scale: 1.02,
             transition: { duration: 0.5, ease: defaultEasing }
           }}
         >

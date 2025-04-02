@@ -87,7 +87,7 @@ const FaqSection = () => {
                 onClick={() => toggleFaq(index)}
                 className={`w-full text-left p-5 rounded-xl flex items-center justify-between transition-colors duration-300 ${
                   openIndex === index 
-                    ? "bg-blue-900/60 border border-white/20" 
+                    ? "bg-gradient-to-r from-blue-900/40 to-purple-900/40 border border-white/20" 
                     : "bg-white/5 border border-white/10 hover:bg-white/10"
                 }`}
                 aria-expanded={openIndex === index}
@@ -125,7 +125,7 @@ const FaqSection = () => {
           </p>
           <a 
             href="#contact" 
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg"
+            className="inline-block bg-gradient-to-r from-blue-500/90 to-purple-600/90 hover:from-blue-600/90 hover:to-purple-700/90 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg"
           >
             Contact Us
           </a>
