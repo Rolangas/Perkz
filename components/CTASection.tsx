@@ -8,14 +8,14 @@ const CTASection = () => {
   return (
     <section id="download" className="section py-20 md:py-32 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-20 left-10 w-40 h-40 bg-blue-500/10 rounded-full blur-[80px] animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-[80px] animate-pulse delay-1000"></div>
+      <div className="absolute top-20 left-10 w-40 h-40 bg-blue-500/5 rounded-full blur-[80px] animate-pulse"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-500/5 rounded-full blur-[80px] animate-pulse delay-1000"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-blue-900/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/10 shadow-xl overflow-hidden relative">
+        <div className="bg-[#1A2142]/60 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/10 shadow-xl overflow-hidden relative">
           {/* Decorative circles */}
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-500/20 rounded-full blur-xl"></div>
-          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl"></div>
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-500/5 rounded-full blur-xl"></div>
+          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/5 rounded-full blur-xl"></div>
           
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
@@ -112,8 +112,8 @@ const CTASection = () => {
                 </div>
                 
                 {/* Decorative elements */}
-                <div className="absolute w-20 h-20 bg-blue-500/20 rounded-full blur-xl -top-10 -left-10"></div>
-                <div className="absolute w-20 h-20 bg-purple-500/20 rounded-full blur-xl -bottom-10 -right-10"></div>
+                <div className="absolute w-20 h-20 bg-blue-500/10 rounded-full blur-xl -top-10 -left-10"></div>
+                <div className="absolute w-20 h-20 bg-purple-500/10 rounded-full blur-xl -bottom-10 -right-10"></div>
               </div>
             </motion.div>
           </div>

@@ -27,7 +27,7 @@ const FeaturesSection = () => {
       icon: <CoinsIcon className="w-10 h-10" />,
       title: "Save, Withdraw, or Enjoy!",
       description: "With Perkz, you can choose how to use your stipends. Save for a special meal, withdraw to your bank account, or use it daily.",
-      color: "bg-gradient-to-br from-blue-500 to-blue-700",
+      color: "bg-blue-600",
       variants: cardLeftVariants
     },
     {
@@ -35,7 +35,7 @@ const FeaturesSection = () => {
       icon: <Wallet2Icon className="w-10 h-10" />,
       title: "No More Wasted Benefits",
       description: "Unlike traditional meal cards, Perkz offers flexibility. Never lose your unused funds at the end of the month.",
-      color: "bg-gradient-to-br from-purple-500 to-purple-700",
+      color: "bg-purple-600",
       variants: cardUpVariants
     },
     {
@@ -43,7 +43,7 @@ const FeaturesSection = () => {
       icon: <CheckCircle2 className="w-10 h-10" />,
       title: "Seamless Reimbursement",
       description: "Generate receipts instantly for expense reports. Easily track and manage all your meal expenses in one place.",
-      color: "bg-gradient-to-br from-teal-500 to-teal-700",
+      color: "bg-teal-600",
       variants: cardRightVariants
     },
   ];
@@ -53,11 +53,11 @@ const FeaturesSection = () => {
       {/* Background decorative elements with parallax */}
       <motion.div 
         style={{ y: y1, rotate }}
-        className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-[100px] -z-10"
+        className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/5 rounded-full blur-[100px] -z-10"
       ></motion.div>
       <motion.div 
         style={{ y: y2, rotate: useTransform(rotate, value => -value) }}
-        className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-[100px] -z-10"
+        className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/5 rounded-full blur-[100px] -z-10"
       ></motion.div>
       
       <div className="container mx-auto px-4 md:px-6">
@@ -105,7 +105,7 @@ const FeaturesSection = () => {
               }}
             >
               <motion.div 
-                className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl blur-sm opacity-70 group-hover:opacity-100 transition-opacity duration-300 -z-10"
+                className="absolute inset-0 bg-blue-600/5 rounded-2xl blur-sm opacity-70 group-hover:opacity-100 transition-opacity duration-300 -z-10"
                 whileHover={{ 
                   scale: 1.05, 
                   opacity: 1 
@@ -180,7 +180,7 @@ const FeaturesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: defaultEasing }}
           viewport={defaultViewport}
-          className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10 shadow-xl"
+          className="bg-[#1A2142]/60 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10 shadow-xl"
           whileHover={{ 
             boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.35)",
             scale: 1.02,

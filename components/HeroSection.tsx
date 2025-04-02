@@ -39,11 +39,11 @@ const HeroSection = () => {
       {/* Background gradient elements with parallax */}
       <motion.div 
         style={{ y: y1 }}
-        className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[100px] -z-10"
+        className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] -z-10"
       ></motion.div>
       <motion.div 
         style={{ y: y2 }}
-        className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-500/20 rounded-full blur-[100px] -z-10"
+        className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px] -z-10"
       ></motion.div>
       
       <div className="container mx-auto px-4 md:px-6">
@@ -89,7 +89,7 @@ const HeroSection = () => {
               >
                 <Link 
                   href="#download" 
-                  className="inline-block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg text-lg"
+                  className="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg text-lg"
                 >
                   Get Started
                 </Link>
@@ -150,7 +150,7 @@ const HeroSection = () => {
                     
                     {/* Balance card with custom animation */}
                     <motion.div 
-                      className="bg-gradient-to-br from-blue-600/90 to-purple-600/90 rounded-2xl p-5 mb-5 shadow-lg"
+                      className="bg-[#5C5CFF] rounded-2xl p-5 mb-5 shadow-lg"
                       variants={floatingVariants}
                       animate="animate"
                       initial={{ y: 30, opacity: 0 }}
@@ -257,14 +257,14 @@ const HeroSection = () => {
             
             {/* Decorative elements with different animation speeds */}
             <motion.div 
-              className="absolute top-20 -right-10 w-20 h-20 bg-blue-400/30 rounded-full blur-xl"
+              className="absolute top-20 -right-10 w-20 h-20 bg-blue-400/15 rounded-full blur-xl"
               variants={floatingVariants}
               animate="animate"
               custom={1}
               style={{ animationDelay: "1s" }}
             ></motion.div>
             <motion.div 
-              className="absolute bottom-20 -left-10 w-16 h-16 bg-purple-400/30 rounded-full blur-xl"
+              className="absolute bottom-20 -left-10 w-16 h-16 bg-purple-400/15 rounded-full blur-xl"
               variants={floatingVariants}
               animate="animate"
               custom={2}
