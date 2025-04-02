@@ -15,7 +15,7 @@ const TestimonialsSection = () => {
       company: "Loop Studios",
       image: "/images/testimonial-1.jpg",
       companyLogo: "/images/idevibelogo.png",
-      content: "Perkz has transformed how our team uses meal benefits. Instead of wasting them in unnecessary food, we can save and spend strategically. It's made our benefits truly valuable!",
+      content: "Perkz has transformed how our team uses meal benefits. We can save and spend strategically. It's made our benefits truly valuable!",
       rating: 5,
     },
     {
@@ -25,7 +25,7 @@ const TestimonialsSection = () => {
       company: "Konin Life",
       image: "/images/testimonial-2.jpg",
       companyLogo: "/images/idevibelogo.png",
-      content: "As someone who often works from home, I love that I can save my meal allowances for days I'm in the office. The flexibility Perkz offers means I never lose the benefits I'm entitled to.",
+      content: "I love that I can save my meal allowances for days I'm in the office. The flexibility means I never lose the benefits I'm entitled to.",
       rating: 5,
     },
     {
@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
       company: "Must Consulting",
       image: "/images/testimonial-3.jpg",
       companyLogo: "/images/idevibelogo.png",
-      content: "From an HR perspective, Perkz has been a game-changer for our benefits program. Employees are happier, and the administrative overhead is minimal. The ROI has been outstanding.",
+      content: "From an HR perspective, Perkz has been a game-changer for our benefits program. Employees are happier, and the ROI has been outstanding.",
       rating: 5,
     },
   ];
@@ -140,7 +140,7 @@ const TestimonialsSection = () => {
         <div className="max-w-4xl mx-auto mb-16 relative">
           {/* Carousel container with overflow hidden */}
           <div className="overflow-hidden rounded-2xl relative">
-            <div className="relative h-[300px] md:h-[280px]">
+            <div className="relative h-[400px] sm:h-[350px] md:h-[280px]">
               <AnimatePresence initial={false} custom={direction} mode="wait">
                 <motion.div
                   key={activeSlide}
@@ -151,29 +151,29 @@ const TestimonialsSection = () => {
                   exit="exit"
                   className="absolute top-0 left-0 w-full h-full"
                 >
-                  <div className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 backdrop-blur-md p-8 md:p-10 rounded-2xl border border-white/10 relative h-full">
+                  <div className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 backdrop-blur-md p-6 sm:p-8 md:p-10 rounded-2xl border border-white/10 relative h-full flex flex-col justify-between">
                     {/* Quote mark */}
-                    <div className="absolute top-6 right-8 text-6xl text-blue-500/20 font-serif">"</div>
+                    <div className="absolute top-4 right-4 md:top-6 md:right-8 text-4xl md:text-6xl text-blue-500/20 font-serif">"</div>
                     
                     {/* Content */}
-                    <div className="mb-6 relative z-10">
-                      <div className="flex mb-4">
+                    <div className="relative z-10 h-full flex flex-col">
+                      <div className="flex mb-3 md:mb-4">
                         {[...Array(5)].map((_, i) => (
                           <StarIcon 
                             key={i} 
-                            className={`w-5 h-5 ${i < testimonials[activeSlide].rating ? 'text-yellow-400' : 'text-gray-400'}`} 
+                            className={`w-4 h-4 md:w-5 md:h-5 ${i < testimonials[activeSlide].rating ? 'text-yellow-400' : 'text-gray-400'}`} 
                             fill={i < testimonials[activeSlide].rating ? 'currentColor' : 'none'} 
                           />
                         ))}
                       </div>
-                      <p className="text-white text-lg italic mb-6">&ldquo;{testimonials[activeSlide].content}&rdquo;</p>
-                      <div className="flex items-center">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg mr-4">
+                      <p className="text-white text-base md:text-lg italic mb-4 md:mb-6 overflow-y-auto flex-grow">&ldquo;{testimonials[activeSlide].content}&rdquo;</p>
+                      <div className="flex items-center mt-auto">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-base md:text-lg mr-3 md:mr-4 flex-shrink-0">
                           {testimonials[activeSlide].name.charAt(0)}
                         </div>
                         <div>
-                          <div className="text-white font-medium">{testimonials[activeSlide].name}</div>
-                          <div className="text-white/60 text-sm">{testimonials[activeSlide].role}, {testimonials[activeSlide].company}</div>
+                          <div className="text-white font-medium text-sm md:text-base">{testimonials[activeSlide].name}</div>
+                          <div className="text-white/60 text-xs md:text-sm">{testimonials[activeSlide].role}, {testimonials[activeSlide].company}</div>
                         </div>
                       </div>
                     </div>
@@ -184,28 +184,28 @@ const TestimonialsSection = () => {
           </div>
           
           {/* Navigation buttons */}
-          <div className="absolute top-1/2 -left-4 md:-left-6 transform -translate-y-1/2">
+          <div className="absolute top-1/2 left-0 md:-left-6 transform -translate-y-1/2 z-10">
             <motion.button 
               onClick={prevSlide}
-              className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors duration-300"
+              className="w-8 h-8 md:w-10 md:h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors duration-300 backdrop-blur-sm shadow-lg"
               aria-label="Previous testimonial"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
-              <ChevronLeftIcon className="w-6 h-6" />
+              <ChevronLeftIcon className="w-5 h-5 md:w-6 md:h-6" />
             </motion.button>
           </div>
-          <div className="absolute top-1/2 -right-4 md:-right-6 transform -translate-y-1/2">
+          <div className="absolute top-1/2 right-0 md:-right-6 transform -translate-y-1/2 z-10">
             <motion.button 
               onClick={nextSlide}
-              className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors duration-300"
+              className="w-8 h-8 md:w-10 md:h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors duration-300 backdrop-blur-sm shadow-lg"
               aria-label="Next testimonial"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
-              <ChevronRightIcon className="w-6 h-6" />
+              <ChevronRightIcon className="w-5 h-5 md:w-6 md:h-6" />
             </motion.button>
           </div>
           
