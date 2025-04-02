@@ -103,7 +103,7 @@ export const cardUpVariants: Variants = {
 export const floatingVariants: Variants = {
   initial: {
     y: 0,
-    opacity: 0.8,
+    opacity: 1,
   },
   animate: {
     y: [0, -15, 0],
@@ -116,7 +116,7 @@ export const floatingVariants: Variants = {
         repeatType: "loop"
       },
       opacity: {
-        duration: 0.8,
+        duration: 0.4,
         ease: defaultEasing
       }
     }
