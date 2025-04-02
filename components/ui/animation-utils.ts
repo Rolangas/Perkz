@@ -101,13 +101,24 @@ export const cardUpVariants: Variants = {
 
 // Floating animation
 export const floatingVariants: Variants = {
+  initial: {
+    y: 0,
+    opacity: 0.8,
+  },
   animate: {
     y: [0, -15, 0],
+    opacity: 1,
     transition: {
-      duration: 5,
-      ease: "easeInOut",
-      repeat: Infinity,
-      repeatType: "loop"
+      y: {
+        duration: 5,
+        ease: "easeInOut",
+        repeat: Infinity,
+        repeatType: "loop"
+      },
+      opacity: {
+        duration: 0.8,
+        ease: defaultEasing
+      }
     }
   }
 };

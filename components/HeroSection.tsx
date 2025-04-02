@@ -20,6 +20,20 @@ const HeroSection = () => {
   const y2 = useTransform(scrollY, [0, 500], [0, -100]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0.3]);
 
+  // Handle orientation changes on mobile
+  useEffect(() => {
+    const handleOrientationChange = () => {
+      // Force reflow for mobile devices when orientation changes
+      window.dispatchEvent(new Event('resize'));
+    };
+
+    window.addEventListener('orientationchange', handleOrientationChange);
+    
+    return () => {
+      window.removeEventListener('orientationchange', handleOrientationChange);
+    };
+  }, []);
+
   return (
     <section className="pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden relative">
       {/* Background gradient elements with parallax */}
@@ -101,13 +115,17 @@ const HeroSection = () => {
           {/* Right column - App mockup with floating animation */}
           <motion.div 
             variants={fadeInVariants}
-            style={{ opacity }}
-            className="relative mx-auto md:ml-auto"
+            className="relative mx-auto md:ml-auto z-10 min-h-[600px] md:min-h-0"
           >
             <motion.div 
-              className="relative w-[280px] h-[580px] md:w-[320px] md:h-[650px] mx-auto"
+              className="relative w-[280px] h-[580px] md:w-[320px] md:h-[650px] mx-auto md:mx-0 fixed md:relative top-[30%] md:top-auto transform -translate-y-1/2 md:transform-none md:translate-y-0"
               variants={floatingVariants}
-              animate="animate"
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: false,
+                margin: "-100px 0px -100px 0px"
+              }}
             >
               {/* Phone frame */}
               <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900 rounded-[40px] p-3 shadow-2xl">
