@@ -166,14 +166,16 @@ const TestimonialsSection = () => {
                           />
                         ))}
                       </div>
-                      <p className="text-white text-base md:text-lg italic mb-4 md:mb-6 overflow-y-auto flex-grow">&ldquo;{testimonials[activeSlide].content}&rdquo;</p>
-                      <div className="flex items-center mt-auto">
-                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-base md:text-lg mr-3 md:mr-4 flex-shrink-0">
-                          {testimonials[activeSlide].name.charAt(0)}
-                        </div>
-                        <div>
-                          <div className="text-white font-medium text-sm md:text-base">{testimonials[activeSlide].name}</div>
-                          <div className="text-white/60 text-xs md:text-sm">{testimonials[activeSlide].role}, {testimonials[activeSlide].company}</div>
+                      <div className="flex flex-col h-full">
+                        <p className="text-white text-base md:text-lg italic mb-3 md:mb-4">&ldquo;{testimonials[activeSlide].content}&rdquo;</p>
+                        <div className="flex items-center mt-2">
+                          <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-base md:text-lg mr-3 md:mr-4 flex-shrink-0">
+                            {testimonials[activeSlide].name.charAt(0)}
+                          </div>
+                          <div>
+                            <div className="text-white font-medium text-sm md:text-base">{testimonials[activeSlide].name}</div>
+                            <div className="text-white/60 text-xs md:text-sm">{testimonials[activeSlide].role}, {testimonials[activeSlide].company}</div>
+                          </div>
                         </div>
                       </div>
                     </div>
