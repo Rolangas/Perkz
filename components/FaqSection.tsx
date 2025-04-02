@@ -15,17 +15,17 @@ const FaqSection = () => {
     {
       id: 1,
       question: "How does Perkz work with existing corporate meal benefits?",
-      answer: "Perkz integrates seamlessly with your existing corporate meal program. When meal funds are allocated, they're added to your Perkz account instead of a traditional meal card, giving you complete control over when and how you use them."
+      answer: "Perkz integrates seamlessly with your existing business travel expenses. Instead of buying a meal at a restaurant, you can add those funds to Perkz account instead, giving you complete control over when and how you use them."
     },
     {
       id: 2,
-      question: "Can I withdraw my meal stipend as cash?",
-      answer: "Yes! Unlike traditional meal benefit programs, Perkz allows you to withdraw your accumulated funds to your bank account. You can choose to save your stipend and withdraw it later, giving you maximum flexibility."
+      question: "What is Buy Now, Use Later?",
+      answer: "It means you can pay for things now (like meals) and use them later, making sure you don't miss out on company's benefits. This helps you get the most out of your business meal allowance."
     },
     {
       id: 3,
-      question: "Is Perkz available for all companies?",
-      answer: "Perkz works with companies of all sizes. If your employer offers meal benefits, they can easily switch to Perkz. We also offer individual plans for employees whose companies don't yet use our platform."
+      question: "Can I withdraw my meal allowance as cash?",
+      answer: "Yes! Unlike traditional meal benefit programs, Perkz allows you to withdraw your accumulated funds to your bank account. You can choose to save your stipend and withdraw it later, giving you maximum flexibility."
     },
     {
       id: 4,
@@ -34,13 +34,13 @@ const FaqSection = () => {
     },
     {
       id: 5,
-      question: "Can I use Perkz at any restaurant?",
-      answer: "Yes! Unlike restrictive meal benefit programs, Perkz can be used anywhere that accepts card payments. You're not limited to specific restaurants or delivery services."
+      question: "Is Perkz available for all companies?",
+      answer: "Everyone can use Perkz. If you are allowed to have a business meal, you can easily use Perkz to buy it now and use it later."
     },
     {
       id: 6,
       question: "How do I get started with Perkz?",
-      answer: "Getting started is easy! Download our app, create an account, and connect it to your corporate email. If your company is already using Perkz, you'll see your balance immediately. If not, you can invite your HR department to explore our corporate solutions."
+      answer: "Getting started is easy! Download our app, create an account, and start using it. If your company is already using Perkz, you should use your corporate email to sign in."
     }
   ];
 
@@ -87,7 +87,7 @@ const FaqSection = () => {
                 onClick={() => toggleFaq(index)}
                 className={`w-full text-left p-5 rounded-xl flex items-center justify-between transition-colors duration-300 ${
                   openIndex === index 
-                    ? "bg-gradient-to-r from-blue-900/60 to-purple-900/60 border border-white/20" 
+                    ? "bg-gradient-to-r from-blue-900/40 to-purple-900/40 border border-white/20" 
                     : "bg-white/5 border border-white/10 hover:bg-white/10"
                 }`}
                 aria-expanded={openIndex === index}
@@ -125,7 +125,7 @@ const FaqSection = () => {
           </p>
           <a 
             href="#contact" 
-            className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg"
+            className="inline-block bg-gradient-to-r from-blue-500/90 to-purple-600/90 hover:from-blue-600/90 hover:to-purple-700/90 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg"
           >
             Contact Us
           </a>

@@ -115,10 +115,10 @@ const HeroSection = () => {
           {/* Right column - App mockup with floating animation */}
           <motion.div 
             variants={fadeInVariants}
-            className="relative mx-auto md:ml-auto z-10 min-h-[600px] md:min-h-0"
+            className="relative mx-auto md:ml-auto z-10 min-h-[700px] md:min-h-0 flex items-center justify-center"
           >
             <motion.div 
-              className="relative w-[280px] h-[580px] md:w-[320px] md:h-[650px] mx-auto md:mx-0 fixed md:relative top-[30%] md:top-auto transform -translate-y-1/2 md:transform-none md:translate-y-0"
+              className="relative w-[280px] h-[580px] md:w-[320px] md:h-[650px] mx-auto md:mx-0 relative top-auto transform-none border border-white/20 shadow-xl rounded-[40px] z-20"
               variants={floatingVariants}
               initial="initial"
               whileInView="animate"
@@ -127,6 +127,9 @@ const HeroSection = () => {
                 margin: "-100px 0px -100px 0px"
               }}
             >
+              {/* Light glow behind phone to improve visibility */}
+              <div className="absolute -inset-5 bg-white/5 rounded-[60px] blur-xl -z-10"></div>
+              
               {/* Phone frame */}
               <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900 rounded-[40px] p-3 shadow-2xl">
                 {/* Screen */}
@@ -147,7 +150,7 @@ const HeroSection = () => {
                     
                     {/* Balance card with custom animation */}
                     <motion.div 
-                      className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-5 mb-5 shadow-lg"
+                      className="bg-gradient-to-br from-blue-600/90 to-purple-600/90 rounded-2xl p-5 mb-5 shadow-lg"
                       variants={floatingVariants}
                       animate="animate"
                       initial={{ y: 30, opacity: 0 }}
