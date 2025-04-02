@@ -140,7 +140,7 @@ const TestimonialsSection = () => {
         <div className="max-w-4xl mx-auto mb-16 relative">
           {/* Carousel container with overflow hidden */}
           <div className="overflow-hidden rounded-2xl relative">
-            <div className="relative h-[400px] sm:h-[350px] md:h-[280px]">
+            <div className="relative h-auto min-h-[250px] sm:min-h-[220px] md:min-h-[200px]">
               <AnimatePresence initial={false} custom={direction} mode="wait">
                 <motion.div
                   key={activeSlide}
@@ -151,12 +151,12 @@ const TestimonialsSection = () => {
                   exit="exit"
                   className="absolute top-0 left-0 w-full h-full"
                 >
-                  <div className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 backdrop-blur-md p-6 sm:p-8 md:p-10 rounded-2xl border border-white/10 relative h-full flex flex-col justify-between">
+                  <div className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 backdrop-blur-md p-6 sm:p-8 md:p-10 rounded-2xl border border-white/10 h-auto">
                     {/* Quote mark */}
                     <div className="absolute top-4 right-4 md:top-6 md:right-8 text-4xl md:text-6xl text-blue-500/20 font-serif">"</div>
                     
                     {/* Content */}
-                    <div className="relative z-10 h-full flex flex-col">
+                    <div className="relative z-10">
                       <div className="flex mb-3 md:mb-4">
                         {[...Array(5)].map((_, i) => (
                           <StarIcon 
@@ -166,9 +166,9 @@ const TestimonialsSection = () => {
                           />
                         ))}
                       </div>
-                      <div className="flex flex-col h-full">
+                      <div className="flex flex-col">
                         <p className="text-white text-base md:text-lg italic mb-3 md:mb-4">&ldquo;{testimonials[activeSlide].content}&rdquo;</p>
-                        <div className="flex items-center mt-2">
+                        <div className="flex items-center mt-2 mb-1">
                           <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-base md:text-lg mr-3 md:mr-4 flex-shrink-0">
                             {testimonials[activeSlide].name.charAt(0)}
                           </div>
